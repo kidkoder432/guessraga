@@ -11,7 +11,7 @@ Basant: SMGmdNS SNdPmGmGrS
 Bhairav: SrGMPdNS SNdPMGMGrS
 Bhairavi: SgMdnSRgrS SndPMPgMrS
 Bhatiyar: SrGMmDNS rNDPMGPGrS
-Bhimpalasi: nSgMPnS SnDPMPgMgRS nSgMPnDPgMgRS
+Bhimpalasi: nSgMPnS SnDPMPgRS
 Bhinna Shadja: SGMDNS SNDMGS
 Bhoopali: SRGPDS SDPGRS 
 Bhoopali Todi: SrgPdS SdPgrS
@@ -26,7 +26,6 @@ Charukeshi: SRGMPdnS SndPMGRS
 Chhayanat: SRGMPmPDNS SNDnDPPmDPmPMGRS
 Darbari Kanada: SRMgMPdnS SndnPgMRS
 Des: SRMPNS SnDMPDMGRGS
-Deshkar: SRGPDS SDPGRS
 Dhani: SgMPnS SnPMgS
 Durga: SRMPDS SDPMRS
 Gorakh Kalyan: SRMDnS SnDMRMPMRS
