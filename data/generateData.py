@@ -22,7 +22,7 @@ if __name__ == '__main__':
     gs = 0
     import time
     t = time.time()
-    with multiprocessing.Pool(4) as pool:
+    with multiprocessing.Pool(6) as pool:
         d = pool.map(op, l)
         f = open('mldata.csv', 'w')
         for x in d:

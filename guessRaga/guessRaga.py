@@ -1,4 +1,5 @@
-import heapq
+import heapq, pathlib, os
+os.chdir(pathlib.Path(__file__).parent.absolute())
 RAGAS = []
 NOTES = list('SRGMPDNrgmdn')
 f = open('raga-index.txt')
@@ -20,15 +21,15 @@ def loadDictionary(): # open raga database
     return englishWords    
 def getRagas(message, threshold=0.5, joiner=' or '): # guessing code
     SAPTAKS = loadDictionary()
-    for x in range(1, 6):
+    for x in range(1, len(message) + 1):
         for i in range(len(message) - x + 1):
             for saptak in list(SAPTAKS.keys()):
-                if ''.join(message[i:i + x]) in saptak[saptak.index(': '):]:
+                if ''.join(message[i:i + x]) in saptak[saptak.index(':'):]:
                     SAPTAKS[saptak] += 1
-                    # print(''.join(message[i:i + x]), saptak)
+                    print(''.join(message[i:i + x]), saptak)
                 elif x == 1:
                     del SAPTAKS[saptak]
-                    # print('Deleted %s' %(saptak))
+                    print('Deleted %s' %(saptak))
     # g = heapq.nlargest(1, SAPTAKS, SAPTAKS.get)
     # return joiner.join(g)
     # print(g)
@@ -52,7 +53,8 @@ def main():   # main interface
         if note not in 'SrRgGMmPdDnN- ':
             return 'Your phrase has a letter which is not a note. Please reenter your phrase.'
     while '-' in phrase:
-        phrase.replace('-', '')
+        phrase = phrase.replace('-', '')
+        
     if len(phrase) < 5:
         return 'Your phrase is too short. Please enter a longer phrase.'
     guesses = getRagas(phrase, threshold, '/')
@@ -63,4 +65,4 @@ def main():   # main interface
 
 if __name__ == '__main__':
     while True:
-        print(main())
+        main()
